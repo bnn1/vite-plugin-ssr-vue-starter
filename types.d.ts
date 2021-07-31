@@ -1,8 +1,9 @@
 declare module '*.vue' {
-  const Component: any
-  export default Component
+    import { DefineComponent } from '@vue/runtime-core';
+    const Component: DefineComponent;
+    export default Component;
 }
 declare module '*.svg' {
-  const imageUrl: string
-  export default imageUrl
+    const imageUrl: string;
+    export default imageUrl;
 }

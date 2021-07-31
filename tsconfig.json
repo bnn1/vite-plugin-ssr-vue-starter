@@ -1,17 +1,24 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "module": "ES2020",
-    "moduleResolution": "Node",
-    "target": "ES2017",
-    "lib": ["DOM"],
-    "skipLibCheck": true,
-    "esModuleInterop": true
-  },
-  "ts-node": {
-    "transpileOnly": true,
     "compilerOptions": {
-      "module": "CommonJS"
+        "strict": true,
+        "module": "ES2020",
+        "moduleResolution": "Node",
+        "target": "ES2017",
+        "lib": ["DOM"],
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "baseUrl": "src",
+        "paths": {
+            "@assets/*": ["./assets/*"],
+            "@modules/*": ["./modules/*"],
+            "@common/*": ["./common/*"],
+            "@/*": ["./*"]
+        }
+    },
+    "ts-node": {
+        "transpileOnly": true,
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
     }
-  }
 }
